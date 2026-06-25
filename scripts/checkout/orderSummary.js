@@ -112,10 +112,9 @@ document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 document.querySelectorAll('.js-delete-link').forEach((link) =>{
   link.addEventListener('click', () =>{
     let productId = link.dataset.productId;
-    removeFromCart(productId); 
-    const container = document.querySelector(`.js-cart-item-container-${productId}`);
-    container.remove();
+    removeFromCart(productId);
     updateCartQuantity();
+    renderCartSummary();
     renderPaymentSummary();
    });
 });
@@ -155,6 +154,7 @@ document.querySelectorAll('.js-save-quantity-link').forEach((link) =>{
       quantityLabel.innerHTML = newQuantity;
 
       updateCartQuantity();
+      renderPaymentSummary();
 
  });
 });
@@ -181,6 +181,7 @@ document.querySelectorAll('.js-quantity-input').forEach((link) =>{
         quantityLabel.innerHTML = newQuantity;
 
         updateCartQuantity();
+        renderPaymentSummary();
     }
  });
 });
