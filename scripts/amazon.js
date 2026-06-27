@@ -44,6 +44,7 @@ products.forEach((product) =>{
               <option value="10">10</option>
             </select>
           </div>
+          ${product.extraInfoHTML()}
 
           <div class="product-spacer"></div>
 
@@ -56,7 +57,9 @@ products.forEach((product) =>{
           data-product-id="${product.id}">
             Add to Cart
           </button>
+          
         </div>
+        
   `;
 });
 
