@@ -10,7 +10,7 @@
   return matchingProduct;
  }
 
- class Product{
+ export class Product{
   id;
   image;
   name;
@@ -36,7 +36,7 @@
   }
  }
 
- class Clothing extends Product{
+ export class Clothing extends Product{
   sizeChartLink;
 
   constructor(productDetails){
@@ -47,12 +47,12 @@
   extraInfoHTML(){
     return `
     <a href="images/clothing-size-chart.png" target="_blank">
-      Size Chart
+      Size chart
     </a>
     `;
   }
 }
-class Appliance extends Product{
+export class Appliance extends Product{
   instructionsLink;
   warrantyLink;
 
@@ -73,25 +73,6 @@ class Appliance extends Product{
     `;
   }
 }
-
-
-/*
-console.log(this);
-
-function logThis(){
-  console.log(this);
-}
-logThis();
-logThis.call('Hello');
-
-const obj2 ={
-  a: 1,
-  b: () =>{
-    console.log(this);
-  }
-}
-obj2.b();
-*/
 
 export const products = [
   {
