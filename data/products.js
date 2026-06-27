@@ -52,6 +52,23 @@
     `;
   }
 }
+/*
+console.log(this);
+
+function logThis(){
+  console.log(this);
+}
+logThis();
+logThis.call('Hello');
+
+const obj2 ={
+  a: 1,
+  b: () =>{
+    console.log(this);
+  }
+}
+obj2.b();
+*/
 
 export const products = [
   {
