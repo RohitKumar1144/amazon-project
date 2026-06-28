@@ -1,4 +1,4 @@
- import {formatCurrency} from '../scripts/utils/money.js';
+import {formatCurrency} from '../scripts/utils/money.js';
  
  export function getProduct(productId){
   let matchingProduct;
@@ -90,6 +90,8 @@ export function loadProductsFetch(){
           }
           return new Product(productDetails);
         });
+  }).catch((error) =>{
+      console.log('Unexpected error. Please try again later.');
   });
 }
 /*
@@ -116,6 +118,10 @@ export function loadProducts(fun){
       });
 
       fun();
+  });
+
+  xmr.addEventListener('error', (error) =>{
+    console.log('Unexpected error. Please try again later.');
   });
 
 
