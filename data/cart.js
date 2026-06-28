@@ -1,6 +1,6 @@
 import { validDeliveryOption } from "./deliveryOptions.js";
 
-export let cart;
+ export let cart;
 
 loadFromStorage();
 
@@ -95,4 +95,18 @@ export function updateDeliveryOption(productId , deliveryOptionId){
 
   saveToStorage();
   
+}
+
+export let cart;
+
+export function loadCart(fun){
+  const xmr = new XMLHttpRequest();
+
+  xmr.addEventListener('load', () =>{
+    console.log(xmr.response);
+
+    fun();
+  });
+  xmr.open('GET', 'https://supersimplebackend.dev/cart')
+  xmr.send();
 }
