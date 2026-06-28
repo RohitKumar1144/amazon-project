@@ -1,6 +1,6 @@
 import { validDeliveryOption } from "./deliveryOptions.js";
 
- export let cart;
+export let cart;
 
 loadFromStorage();
 
@@ -96,8 +96,6 @@ export function updateDeliveryOption(productId , deliveryOptionId){
   saveToStorage();
   
 }
-
-export let cart;
 
 export function loadCart(fun){
   const xmr = new XMLHttpRequest();

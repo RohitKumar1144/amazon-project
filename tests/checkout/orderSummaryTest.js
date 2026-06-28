@@ -1,11 +1,11 @@
 import { renderCartSummary } from "../../scripts/checkout/orderSummary.js";
 import { loadFromStorage, cart } from "../../data/cart.js";
-import { loadProducts } from "../../data/products.js";
+import { loadProducts, loadProductsFetch } from "../../data/products.js";
 
 describe('test suite: renderCartSummary', () =>{
   beforeAll((done) =>{
-    loadProducts(() =>{
-      done();
+    loadProductsFetch().then(() =>{
+      done()
     });
   });
 
