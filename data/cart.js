@@ -108,3 +108,8 @@ export function loadCart(fun){
   xmr.open('GET', 'https://supersimplebackend.dev/cart')
   xmr.send();
 }
+export async function loadCartFetch(fun){
+  const response = await fetch('https://supersimplebackend.dev/cart');
+  const responseText = await response.text();
+  console.log(responseText);
+}
