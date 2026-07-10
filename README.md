@@ -1,1 +1,2 @@
-Amazon Project
+Amazon Project 
+It is fronted e-commerce website.
