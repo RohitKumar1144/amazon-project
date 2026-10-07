@@ -106,4 +106,12 @@ document.querySelector('.js-search-button')
       const search = document.querySelector('.js-search-bar').value;
       window.location.href = `amazon.html?search=${search}`;
     });
+
+  document.querySelector('.js-search-bar')
+    .addEventListener('keydown', (event) => {
+      if (event.key === 'Enter') {
+        const searchTerm = document.querySelector('.js-search-bar').value;
+        window.location.href = `amazon.html?search=${searchTerm}`;
+      }
+    });
 }

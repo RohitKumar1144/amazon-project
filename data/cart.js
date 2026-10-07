@@ -113,3 +113,8 @@ export async function loadCartFetch(fun){
   const responseText = await response.text();
   console.log(responseText);
 }
+
+export function resetCart() {
+  cart = [];
+  saveToStorage();
+}
